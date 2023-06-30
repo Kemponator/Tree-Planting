@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
+
+.logo {
+  width: 100px;
+}
+
+:root {
+  --clr-light: rgb(243, 243, 243);
+  --clr-dark: #4f1413;
+  --clr-accent: #38b000;
+}
+
+h1 {
+  color: var(--clr-accent);
+}

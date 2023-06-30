@@ -14,8 +14,48 @@ body {
   --clr-light: rgb(243, 243, 243);
   --clr-dark: #4f1413;
   --clr-accent: #38b000;
+  --ff-fancy: "Sofadi One", cursive;
+}
+
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.container {
+  width: 90%;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+header {
+  background-color: var(--clr-light);
+  padding: 1em 0;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav li {
+  line-height: 1.6;
+}
+
+main {
+  flex-grow: 1;
+}
+
+footer {
+  background-color: var(--clr-accent);
 }
 
 h1 {
   color: var(--clr-accent);
+  font-family: var(--ff-fancy);
+  font-weight: bold;
+  font-size: 3rem;
 }

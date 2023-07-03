@@ -1,0 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
+.h2-1 {
+  font-family: "Montserrat", sans-serif;
+  font-size: 100px;
+  color: white;
+  font-weight: 350;
+  text-align: center;
+  margin: 2rem;
+  transition: 0.5s;
+}
+
+.h2-1:hover {
+  -webkit-text-stroke: 2px #fff;
+  color: transparent;
+}
+
+.background-video {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+@media (min-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: auto;
+  }
+}
+
+@media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: auto;
+    height: 100%;
+  }
+}
+
+.hero {
+  border: 1920px 1080px;
+}
+
+.p1 {
+  max-width: 80%;
+  text-align: center;
+  margin: 2rem auto;
+}
+
+.h2-2 {
+  font-weight: bold;
+  margin: 2rem auto;
+}
+
+p {
+  margin: 2rem auto;
+}

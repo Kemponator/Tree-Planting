@@ -32,15 +32,15 @@
           </nav>
         </div>
       </header>
-      <main>
+      <main class="input-main">
         <div class="container">
           <h2>Our Trees</h2>
           <section class="registration-section">
             <form id="registration-form">
               <fieldset>
-                <legend>Our Group</legend>
+                <legend>Registration Form</legend>
                 <label for="group-name">Group Name</label>
-                <input type="text" id="group-name" name="group-name" />
+                <input type="text" id="group-name" name="group-name" required />
                 <label for="number-of-weeks">Number of Weeks</label>
                 <input
                   type="number"
@@ -48,13 +48,41 @@
                   name="number-of-weeks"
                   min="4"
                   max="10"
+                  required
                 />
               </fieldset>
-              <button type="submit">Submit</button>
+              <button type="submit" id="registration-form-button">
+                Submit
+              </button>
             </form>
           </section>
-          <section class="welcome-section" id="welcome-section"></section>
-          <section class="planting-results-section"></section>
+          <section class="welcome-section" id="welcome-section">
+            <div class="welcome-message" id="welcome-message"></div>
+            <button
+              class="activate-planting-button hidden"
+              id="activate-planting-button"
+            >
+              start planting
+            </button>
+          </section>
+          <section class="planting-section hidden" id="planting-section">
+            <form id="planting-form">
+              <fieldset>
+                <legend id="planting-form-legend"></legend>
+                <label for="trees-planted" id="trees-planted-label"> </label>
+                <input
+                  type="number"
+                  id="trees-planted"
+                  min="10"
+                  max="100"
+                  step="10"
+                  required
+                />
+                trees!
+              </fieldset>
+              <button type="submit">submit</button>
+            </form>
+          </section>
 
           <a href="results.html">Go to Results!</a>
         </div>

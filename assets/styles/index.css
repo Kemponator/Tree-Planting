@@ -39,6 +39,7 @@
 }
 
 .hero {
+  position: relative;
   border: 1920px 1080px;
 }
 

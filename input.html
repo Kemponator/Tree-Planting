@@ -3,9 +3,52 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="Community tree planting scheme" />
     <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Sofadi+One&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="reset.css" />
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>Hello input</h1>
+    <div class="wrapper">
+      <header>
+        <div class="container">
+          <div class="logo-container">
+            <img class="logo" src="assets/images/logo.png" alt="logo" />
+          </div>
+          <h1>Tree Huggers</h1>
+          <nav>
+            <ul>
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="#">Our Trees</a></li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+      <main>
+        <div class="container">
+          <h2>Our Trees</h2>
+          <form id="registration-form">
+            <fieldset>
+              <legend>Our Group</legend>
+              <label for="group-name">Group Name</label>
+              <input type="text" id="group-name" name="group-name" />
+            </fieldset>
+            <button type="submit">Submit</button>
+          </form>
+          <a href="results.html">Go to Results!</a>
+        </div>
+      </main>
+      <footer>
+        <div class="container"><h3>&#169; Tree Huggers Ltd</h3></div>
+      </footer>
+    </div>
+    <script src="assets/script/app.js"></script>
   </body>
 </html>

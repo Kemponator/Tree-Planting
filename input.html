@@ -34,14 +34,27 @@
       <main>
         <div class="container">
           <h2>Our Trees</h2>
-          <form id="registration-form">
-            <fieldset>
-              <legend>Our Group</legend>
-              <label for="group-name">Group Name</label>
-              <input type="text" id="group-name" name="group-name" />
-            </fieldset>
-            <button type="submit">Submit</button>
-          </form>
+          <section class="registration-section">
+            <form id="registration-form">
+              <fieldset>
+                <legend>Our Group</legend>
+                <label for="group-name">Group Name</label>
+                <input type="text" id="group-name" name="group-name" />
+                <label for="number-of-weeks">Number of Weeks</label>
+                <input
+                  type="number"
+                  id="number-of-weeks"
+                  name="number-of-weeks"
+                  min="4"
+                  max="10"
+                />
+              </fieldset>
+              <button type="submit">Submit</button>
+            </form>
+          </section>
+          <section class="welcome-section" id="welcome-section"></section>
+          <section class="planting-results-section"></section>
+
           <a href="results.html">Go to Results!</a>
         </div>
       </main>
@@ -50,5 +63,6 @@
       </footer>
     </div>
     <script src="assets/script/app.js"></script>
+    <script src="assets/script/input.js"></script>
   </body>
 </html>

@@ -8,6 +8,10 @@ function Group(name) {
   data.push(this);
 }
 
+Group.prototype.addWeek = function () {
+  this.treesPerWeek.push(4);
+};
+
 const yarmouth = new Group("yarmouth");
 const norwich = new Group("norwich");
 const halesworth = new Group("halesworth");

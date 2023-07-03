@@ -6,8 +6,12 @@ body {
   margin: 0;
 }
 
-.logo {
+/* .logo {
   width: 100px;
+} */
+
+img {
+  width: 100%;
 }
 
 :root {
@@ -31,7 +35,7 @@ body {
 }
 
 header {
-  background-color: var(--clr-light);
+  background-color: var(--clr-accent);
   padding: 1em 0;
 }
 
@@ -39,6 +43,14 @@ header .container {
   display: flex;
   justify-content: space-between;
   align-items: center;
+}
+
+.logo-container {
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  background-color: var(--clr-light);
+  padding: 10px;
 }
 
 nav li {
@@ -54,7 +66,7 @@ footer {
 }
 
 h1 {
-  color: var(--clr-accent);
+  color: var(--clr-dark);
   font-family: var(--ff-fancy);
   font-weight: bold;
   font-size: 3rem;

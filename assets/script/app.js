@@ -2,6 +2,13 @@
 
 const data = [];
 
+function getRandomNumber() {
+  return (Math.floor(Math.random() * 10) + 1) * 10;
+}
+
+let group = "";
+let weeklyTrees;
+
 function Group(name) {
   this.name = name;
   this.treesPerWeek = [];
@@ -9,7 +16,11 @@ function Group(name) {
 }
 
 Group.prototype.addWeek = function () {
-  this.treesPerWeek.push(4);
+  if (this.name === group) {
+    this.treesPerWeek.push(weeklyTrees);
+  } else {
+    this.treesPerWeek.push(getRandomNumber());
+  }
 };
 
 const yarmouth = new Group("yarmouth");

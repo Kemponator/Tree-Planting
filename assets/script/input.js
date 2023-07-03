@@ -2,11 +2,12 @@
 
 let week = 1;
 
-let group = "";
+// let group = "";
 let weeks = 1;
 
 const registrationForm = document.getElementById("registration-form");
 // const welcomeMessage = document.getElementById("welcome-message");
+const plantingForm = document.getElementById("planting-form");
 
 const activatePlantingButton = document.getElementById(
   "activate-planting-button"
@@ -50,7 +51,6 @@ function welcomeUser(user, weeks) {
 }
 
 function showPlantingForm() {
-  const plantingForm = document.getElementById("planting-form");
   document.getElementById("welcome-section").classList.add("hidden");
   document.getElementById(
     "planting-form-legend"
@@ -65,8 +65,19 @@ function showPlantingForm() {
 
 function submitWeeklyPlanting(e) {
   e.preventDefault();
+  weeklyTrees = parseInt(document.getElementById("trees-planted").value);
   for (let i = 0; i < data.length; i++) {
     data[i].addWeek();
   }
+  week++;
+  plantingForm.reset();
+
+  document.getElementById(
+    "planting-form-legend"
+  ).textContent = `Tree Planting: Week ${week}`;
+
   console.log(data);
+
+  localStorage.setItem("weekly-data", JSON.stringify(data));
+  localStorage.setItem("week", JSON.stringify(week));
 }

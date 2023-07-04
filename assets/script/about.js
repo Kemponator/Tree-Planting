@@ -9,13 +9,16 @@ bioButtonFrances.addEventListener("click", handleFrancesBioClick);
 
 function handleFrancesBioClick() {
   const francesTopImage = document.getElementById("frances-top-image");
-  if (!bioVisible) {
-    bioButtonText = "read bio";
-  } else {
+
+  if (bioVisible) {
+    bioVisible = false;
     bioButtonText = "hide bio";
+  } else {
+    bioVisible = true;
+    bioButtonText = "read bio";
   }
+
   francesTopImage.classList.toggle("visible");
   francesTopImage.classList.toggle("hidden");
   bioButtonFrances.textContent = bioButtonText;
-  //   bioVisible = !bioVisible ? bioVisible
 }

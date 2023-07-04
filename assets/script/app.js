@@ -1,20 +1,5 @@
 "use strict";
 
-// const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
-// const weekFromLS = JSON.parse(localStorage.getItem("week"));
-
-// let data;
-
-// let week;
-
-// if (dataFromLS) {
-//   data = dataFromLS;
-//   week = weekFromLS;
-// } else {
-//   data = [];
-//   week = 1;
-// }
-
 const data = [];
 
 let week = 1;
@@ -45,4 +30,4 @@ const norwich = new Group("norwich");
 const halesworth = new Group("halesworth");
 const southwold = new Group("southwold");
 
-console.log(data);
+// console.log(data);

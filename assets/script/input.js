@@ -1,12 +1,22 @@
 "use strict";
 
-// let week = 1;
+const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
+const weekFromLS = JSON.parse(localStorage.getItem("week"));
 
-// let group = "";
+// if (dataFromLS) {
+//   while (data.length) {
+//     data.pop();
+//   }
+//   for (let i = 0; i < dataFromLS.length; i++) {
+//     data.push(dataFromLS[i]);
+//   }
+// }
+
+console.log(data);
+
 let weeks = 1;
 
 const registrationForm = document.getElementById("registration-form");
-// const welcomeMessage = document.getElementById("welcome-message");
 const plantingForm = document.getElementById("planting-form");
 
 const activatePlantingButton = document.getElementById(
@@ -29,8 +39,6 @@ function handleRegistrationFormSubmit(e) {
   weeks = numberOfWeeks.value;
 
   new Group(group);
-
-  console.log(data);
 
   welcomeUser(group, weeks);
 
@@ -65,6 +73,9 @@ function showPlantingForm() {
 
 function submitWeeklyPlanting(e) {
   e.preventDefault();
+
+  // console.log(typeof weeks);
+
   weeklyTrees = parseInt(document.getElementById("trees-planted").value);
   for (let i = 0; i < data.length; i++) {
     data[i].addWeek();
@@ -76,8 +87,14 @@ function submitWeeklyPlanting(e) {
     "planting-form-legend"
   ).textContent = `Tree Planting: Week ${week}`;
 
-  console.log(data);
-
   localStorage.setItem("weekly-data", JSON.stringify(data));
   localStorage.setItem("week", JSON.stringify(week));
+
+  if (week > parseInt(weeks)) {
+    goToResults();
+  }
+}
+
+function goToResults() {
+  console.log("results");
 }

@@ -89,6 +89,7 @@ function submitWeeklyPlanting(e) {
 
   localStorage.setItem("weekly-data", JSON.stringify(data));
   localStorage.setItem("week", JSON.stringify(week));
+  localStorage.setItem("weeks", JSON.stringify(weeks));
 
   if (week > parseInt(weeks)) {
     goToResults();

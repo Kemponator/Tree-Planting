@@ -28,3 +28,18 @@ img {
   top: 0;
   opacity: 0;
 }
+
+.visible {
+  opacity: 1;
+  transition: 1s ease-in;
+}
+
+.hidden {
+  opacity: 0;
+  transition: 1s ease-out;
+}
+
+.bio {
+  position: absolute;
+  bottom: 10px;
+}

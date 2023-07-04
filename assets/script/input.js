@@ -1,6 +1,6 @@
 "use strict";
 
-let week = 1;
+// let week = 1;
 
 // let group = "";
 let weeks = 1;

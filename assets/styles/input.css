@@ -41,7 +41,7 @@ legend {
   font-weight: bold;
 }
 
-button {
+/* button {
   background-color: var(--clr-accent);
   width: 100%;
   margin: 2em auto;
@@ -50,7 +50,7 @@ button {
   text-transform: uppercase;
   letter-spacing: 0.1em;
   border-radius: 5px;
-}
+} */
 
 /* generic styles? */
 

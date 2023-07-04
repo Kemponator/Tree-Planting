@@ -1,6 +1,23 @@
 "use strict";
 
+// const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
+// const weekFromLS = JSON.parse(localStorage.getItem("week"));
+
+// let data;
+
+// let week;
+
+// if (dataFromLS) {
+//   data = dataFromLS;
+//   week = weekFromLS;
+// } else {
+//   data = [];
+//   week = 1;
+// }
+
 const data = [];
+
+let week = 1;
 
 function getRandomNumber() {
   return (Math.floor(Math.random() * 10) + 1) * 10;

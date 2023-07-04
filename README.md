@@ -35,3 +35,17 @@ By the end of the day the MVP will be:
 - to have the generic header and footer set up
 - to have the form HTML completed on user input page
 - to have constructor function set up and operating for basic information
+
+### Reflections on Monday 3rd June
+
+- Generic header and footer set up. Styling to be optimised.
+- Constructor function is set up and operating
+
+## Tuesday 4th June - Session 2
+
+By the end of the day the MVP will be:
+
+- Input page form styling to be optimised
+- Landing page styling complete
+- About page skeleton and basic styling completed
+- Fetch data from local storage and make basic chart to display results. (Stretch goal - calculate CO2 data and display)

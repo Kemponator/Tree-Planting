@@ -2,8 +2,15 @@
   box-sizing: border-box;
 }
 
+:root {
+  --clr-light: rgb(243, 243, 243);
+  --clr-dark: #4f1413;
+  --clr-accent: #38b000;
+  --ff-fancy: "Sofadi One", cursive;
+}
 body {
   margin: 0;
+  background-color: var(--clr-light);
 }
 
 /* .logo {
@@ -12,13 +19,6 @@ body {
 
 img {
   width: 100%;
-}
-
-:root {
-  --clr-light: rgb(243, 243, 243);
-  --clr-dark: #4f1413;
-  --clr-accent: #38b000;
-  --ff-fancy: "Sofadi One", cursive;
 }
 
 .wrapper {
@@ -30,7 +30,7 @@ img {
 
 .container {
   width: 90%;
-  max-width: 800px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 

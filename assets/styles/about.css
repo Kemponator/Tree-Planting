@@ -1,0 +1,30 @@
+.about-section-people {
+  border: 1px solid red;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  column-gap: 4em;
+  row-gap: 2em;
+}
+
+img {
+  display: block;
+  width: 100%;
+  border-radius: 20px;
+  margin: 0;
+}
+
+.about-main {
+  padding: 2em 0;
+}
+
+.person-div {
+  max-width: 350px;
+  position: relative;
+}
+
+.person-image-top {
+  position: absolute;
+  top: 0;
+  opacity: 0;
+}

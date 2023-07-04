@@ -14,6 +14,7 @@
     <link rel="stylesheet" href="assets/styles/reset.css" />
     <link rel="stylesheet" href="assets/styles/style.css" />
     <link rel="stylesheet" href="assets/styles/results.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
   <body>
     <div class="wrapper">
@@ -33,12 +34,20 @@
         </div>
       </header>
       <main>
-        <div class="container">Results page</div>
+        <div class="container">
+          <h2>Results</h2>
+          <section class="chart-section bar-chart-section">
+            <div class="bar-chart-container chart-container">
+              <canvas id="bar-chart"></canvas>
+            </div>
+          </section>
+        </div>
       </main>
       <footer>
         <div class="container"><h3>&#169; Tree Huggers Ltd</h3></div>
       </footer>
     </div>
     <script src="assets/script/app.js"></script>
+    <script src="assets/script/results.js"></script>
   </body>
 </html>

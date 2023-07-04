@@ -1,24 +1,21 @@
 "use strict";
 
-let bioVisible = false;
-let bioButtonText;
+let francesBioVisible = false;
 
 const bioButtonFrances = document.getElementById("bio-button-frances");
 
 bioButtonFrances.addEventListener("click", handleFrancesBioClick);
 
 function handleFrancesBioClick() {
-  const francesTopImage = document.getElementById("frances-top-image");
-
-  if (bioVisible) {
+  if (francesBioVisible) {
+    bioButtonFrances.textContent = "read bio";
     bioVisible = false;
-    bioButtonText = "hide bio";
   } else {
-    bioVisible = true;
-    bioButtonText = "read bio";
+    bioButtonFrances.textContent = "hide bio";
+    francesBioVisible = true;
   }
+  const francesTopImage = document.getElementById("frances-top-image");
 
   francesTopImage.classList.toggle("visible");
   francesTopImage.classList.toggle("hidden");
-  bioButtonFrances.textContent = bioButtonText;
 }

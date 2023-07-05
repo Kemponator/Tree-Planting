@@ -45,22 +45,3 @@ button a {
   text-decoration: none;
   color: inherit;
 }
-
-/* button {
-  background-color: var(--clr-accent);
-  width: 100%;
-  margin: 2em auto;
-  padding: 0.5em 2em;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 0.1em;
-  border-radius: 5px;
-} */
-
-/* generic styles? */
-
-/* h2 {
-  font-size: 2rem;
-  font-weight: bold;
-  margin: 1em 0;
-} */

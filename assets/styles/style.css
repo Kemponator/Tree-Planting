@@ -62,8 +62,14 @@ header .container {
   padding: 10px;
 }
 
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
 nav li {
   line-height: 1.6;
+  font-family: "Montserrat", sans-serif;
 }
 
 main {

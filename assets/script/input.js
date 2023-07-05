@@ -3,6 +3,7 @@
 const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
 const weeksFromLS = JSON.parse(localStorage.getItem("weeks"));
 const weekFromLS = JSON.parse(localStorage.getItem("week"));
+const groupFromLS = JSON.parse(localStorage.getItem("group"));
 
 const registrationSection = document.getElementById("registration-section");
 const welcomeSection = document.getElementById("welcome-section");
@@ -34,15 +35,16 @@ if (dataFromLS) {
     data.pop();
   }
 
+  weeks = weeksFromLS;
+  week = weekFromLS;
+  group = groupFromLS;
+
   instantiateGroups();
   new Group(group);
 
   for (let i = 0; i < data.length; i++) {
     data[i].treesPerWeek = prevData[i].treesPerWeek;
   }
-
-  weeks = weeksFromLS;
-  week = weekFromLS;
 
   showPlantingSection();
 } else {
@@ -52,12 +54,6 @@ if (dataFromLS) {
 console.log(data);
 console.log(weeks);
 console.log(week);
-
-// All sections to be hidden to start. If there is LS data then make planting section visible. If there is no LS data then make registration section visible.
-// Retrieve data from local storage
-// As part of welcome statement feed back names of other groups. Save data to LS
-// In planting section each week feed back total planted with encouraging statement.
-// If number of weeks has been reached get new thank you for taking part section with total number of trees planted.
 
 registrationForm.addEventListener("submit", handleRegistrationFormSubmit);
 
@@ -85,6 +81,7 @@ function handleRegistrationFormSubmit(e) {
   localStorage.setItem("weekly-data", JSON.stringify(data));
   localStorage.setItem("week", JSON.stringify(week));
   localStorage.setItem("weeks", JSON.stringify(weeks));
+  localStorage.setItem("group", JSON.stringify(group));
 }
 
 function welcomeUser(user, weeks) {
@@ -124,8 +121,6 @@ function showPlantingSection() {
     "trees-planted-label"
   ).textContent = `This week ${group} will plant: `;
   plantingSection.classList.remove("hidden");
-
-  // plantingForm.addEventListener("submit", submitWeeklyPlanting);
 }
 
 function submitWeeklyPlanting(e) {
@@ -147,6 +142,7 @@ function submitWeeklyPlanting(e) {
   localStorage.setItem("weekly-data", JSON.stringify(data));
   localStorage.setItem("week", JSON.stringify(week));
   localStorage.setItem("weeks", JSON.stringify(weeks));
+  localStorage.setItem("group", JSON.stringify(group));
 
   if (week > parseInt(weeks)) {
     showCompletedSection();

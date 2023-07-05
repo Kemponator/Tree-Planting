@@ -6,7 +6,7 @@ const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
 const weeksFromLS = JSON.parse(localStorage.getItem("weeks"));
 const weekFromLS = JSON.parse(localStorage.getItem("week"));
 
-console.log(weeksFromLS);
+console.log(dataFromLS);
 
 // console.log(dataFromLS);
 

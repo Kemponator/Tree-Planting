@@ -88,9 +88,30 @@ function handleRegistrationFormSubmit(e) {
 }
 
 function welcomeUser(user, weeks) {
+  const originalGroupArray = [];
+  for (let i = 0; i < data.length; i++) {
+    if (data[i].name !== group) {
+      originalGroupArray.push(data[i].name);
+    }
+  }
+
+  let originalGroups = "";
+
+  for (let i = 0; i < originalGroupArray.length; i++) {
+    if (i === 0) {
+      originalGroups += `${originalGroupArray[0]}`;
+    } else if (i === originalGroupArray.length - 1) {
+      originalGroups += ` and ${
+        originalGroupArray[originalGroupArray.length - 1]
+      }.`;
+    } else {
+      originalGroups += `, ${originalGroupArray[i]}`;
+    }
+  }
+
   const welcomeMessage = document.getElementById("welcome-message");
   const welcomeP = document.createElement("p");
-  welcomeP.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks.`;
+  welcomeP.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks. The other groups in the scheme are ${originalGroups}`;
   welcomeMessage.appendChild(welcomeP);
 }
 

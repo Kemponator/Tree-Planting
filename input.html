@@ -35,7 +35,11 @@
       <main class="input-main">
         <div class="container">
           <h2>Our Trees</h2>
-          <section class="registration-section">
+          <section
+            class="registration-section hidden"
+            id="registration-section"
+          >
+            <!-- <section class="registration-section hidden"> -->
             <form id="registration-form">
               <fieldset>
                 <legend>Registration Form</legend>
@@ -56,10 +60,10 @@
               </button>
             </form>
           </section>
-          <section class="welcome-section" id="welcome-section">
+          <section class="welcome-section hidden" id="welcome-section">
             <div class="welcome-message" id="welcome-message"></div>
             <button
-              class="activate-planting-button hidden"
+              class="activate-planting-button"
               id="activate-planting-button"
             >
               start planting
@@ -83,8 +87,11 @@
               <button type="submit">submit</button>
             </form>
           </section>
+          <section class="completed-section hidden" id="completed-section">
+            <div class="completed-message" id="completed-message"></div>
+          </section>
 
-          <a href="results.html">Go to Results!</a>
+          <button><a href="results.html">Go to Results!</a></button>
         </div>
       </main>
       <footer>

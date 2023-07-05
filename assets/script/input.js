@@ -1,23 +1,14 @@
 "use strict";
 
 const dataFromLS = JSON.parse(localStorage.getItem("weekly-data"));
+const weeksFromLS = JSON.parse(localStorage.getItem("weeks"));
 const weekFromLS = JSON.parse(localStorage.getItem("week"));
 
-// if (dataFromLS) {
-//   while (data.length) {
-//     data.pop();
-//   }
-//   for (let i = 0; i < dataFromLS.length; i++) {
-//     data.push(dataFromLS[i]);
-//   }
-// }
-
-console.log(data);
-
-let weeks = 1;
-
+const registrationSection = document.getElementById("registration-section");
 const registrationForm = document.getElementById("registration-form");
+const welcomeSection = document.getElementById("welcome-section");
 const plantingForm = document.getElementById("planting-form");
+const plantingSection = document.getElementById("planting-section");
 
 const activatePlantingButton = document.getElementById(
   "activate-planting-button"
@@ -26,6 +17,43 @@ const activatePlantingButton = document.getElementById(
 const registrationFormButton = document.getElementById(
   "registration-form-button"
 );
+
+let week = 1;
+let weeks;
+
+if (dataFromLS) {
+  while (data.length) {
+    data.pop();
+  }
+  for (let i = 0; i < dataFromLS.length; i++) {
+    data.push(dataFromLS[i]);
+  }
+  weeks = weeksFromLS;
+  week = weekFromLS;
+
+  plantingSection.classList.remove("hidden");
+
+  document.getElementById(
+    "planting-form-legend"
+  ).textContent = `Tree Planting: Week ${week}`;
+  document.getElementById(
+    "trees-planted-label"
+  ).textContent = `This week ${group} will plant: `;
+
+  plantingForm.addEventListener("submit", submitWeeklyPlanting);
+} else {
+  registrationSection.classList.remove("hidden");
+}
+
+console.log(data);
+console.log(weeks);
+console.log(week);
+
+// All sections to be hidden to start. If there is LS data then make planting section visible. If there is no LS data then make registration section visible.
+// Retrieve data from local storage
+// As part of welcome statement feed back names of other groups. Save data to LS
+// In planting section each week feed back total planted with encouraging statement.
+// If number of weeks has been reached get new thank you for taking part section with total number of trees planted.
 
 registrationForm.addEventListener("submit", handleRegistrationFormSubmit);
 
@@ -44,11 +72,15 @@ function handleRegistrationFormSubmit(e) {
 
   registrationForm.reset();
 
-  registrationForm.classList.add("hidden");
+  registrationSection.classList.add("hidden");
 
-  activatePlantingButton.classList.remove("hidden");
+  welcomeSection.classList.remove("hidden");
 
   activatePlantingButton.addEventListener("click", showPlantingForm);
+
+  localStorage.setItem("weekly-data", JSON.stringify(data));
+  localStorage.setItem("week", JSON.stringify(week));
+  localStorage.setItem("weeks", JSON.stringify(weeks));
 }
 
 function welcomeUser(user, weeks) {
@@ -66,15 +98,13 @@ function showPlantingForm() {
   document.getElementById(
     "trees-planted-label"
   ).textContent = `This week ${group} will plant: `;
-  document.getElementById("planting-section").classList.remove("hidden");
+  plantingSection.classList.remove("hidden");
 
   plantingForm.addEventListener("submit", submitWeeklyPlanting);
 }
 
 function submitWeeklyPlanting(e) {
   e.preventDefault();
-
-  // console.log(typeof weeks);
 
   weeklyTrees = parseInt(document.getElementById("trees-planted").value);
   for (let i = 0; i < data.length; i++) {

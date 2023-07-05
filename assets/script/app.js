@@ -1,5 +1,7 @@
 "use strict";
 
+const existingGroups = ["yarmouth", "norwich", "halesworth", "southwold"];
+
 const data = [];
 
 // let week = 1;
@@ -25,9 +27,10 @@ Group.prototype.addWeek = function () {
   }
 };
 
-const yarmouth = new Group("yarmouth");
-const norwich = new Group("norwich");
-const halesworth = new Group("halesworth");
-const southwold = new Group("southwold");
+function instantiateGroups() {
+  for (let i = 0; i < existingGroups.length; i++) {
+    new Group(existingGroups[i]);
+  }
+}
 
-// console.log(data);
+instantiateGroups();

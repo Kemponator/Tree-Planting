@@ -5,16 +5,14 @@ const weeksFromLS = JSON.parse(localStorage.getItem("weeks"));
 const weekFromLS = JSON.parse(localStorage.getItem("week"));
 
 const registrationSection = document.getElementById("registration-section");
-const welcomeSection = document.getElementById("welcome-section");
-const plantingSection = document.getElementById("planting-section");
-const completedSection = document.getElementById("completed-section");
-
 const registrationForm = document.getElementById("registration-form");
+const welcomeSection = document.getElementById("welcome-section");
 const plantingForm = document.getElementById("planting-form");
+const plantingSection = document.getElementById("planting-section");
 
-const startPlantingButton = document.getElementById("start-planting-button");
-
-plantingForm.addEventListener("submit", submitWeeklyPlanting);
+const activatePlantingButton = document.getElementById(
+  "activate-planting-button"
+);
 
 const registrationFormButton = document.getElementById(
   "registration-form-button"
@@ -24,27 +22,25 @@ let week = 1;
 let weeks;
 
 if (dataFromLS) {
-  let prevData = [];
-
-  for (let i = 0; i < dataFromLS.length; i++) {
-    prevData.push(dataFromLS[i]);
-  }
-
   while (data.length) {
     data.pop();
   }
-
-  instantiateGroups();
-  new Group(group);
-
-  for (let i = 0; i < data.length; i++) {
-    data[i].treesPerWeek = prevData[i].treesPerWeek;
+  for (let i = 0; i < dataFromLS.length; i++) {
+    data.push(dataFromLS[i]);
   }
-
   weeks = weeksFromLS;
   week = weekFromLS;
 
-  showPlantingSection();
+  plantingSection.classList.remove("hidden");
+
+  document.getElementById(
+    "planting-form-legend"
+  ).textContent = `Tree Planting: Week ${week}`;
+  document.getElementById(
+    "trees-planted-label"
+  ).textContent = `This week ${group} will plant: `;
+
+  plantingForm.addEventListener("submit", submitWeeklyPlanting);
 } else {
   registrationSection.classList.remove("hidden");
 }
@@ -80,7 +76,7 @@ function handleRegistrationFormSubmit(e) {
 
   welcomeSection.classList.remove("hidden");
 
-  startPlantingButton.addEventListener("click", showPlantingSection);
+  activatePlantingButton.addEventListener("click", showPlantingForm);
 
   localStorage.setItem("weekly-data", JSON.stringify(data));
   localStorage.setItem("week", JSON.stringify(week));
@@ -94,8 +90,8 @@ function welcomeUser(user, weeks) {
   welcomeMessage.appendChild(welcomeP);
 }
 
-function showPlantingSection() {
-  welcomeSection.classList.add("hidden");
+function showPlantingForm() {
+  document.getElementById("welcome-section").classList.add("hidden");
   document.getElementById(
     "planting-form-legend"
   ).textContent = `Tree Planting: Week ${week}`;
@@ -104,13 +100,11 @@ function showPlantingSection() {
   ).textContent = `This week ${group} will plant: `;
   plantingSection.classList.remove("hidden");
 
-  // plantingForm.addEventListener("submit", submitWeeklyPlanting);
+  plantingForm.addEventListener("submit", submitWeeklyPlanting);
 }
 
 function submitWeeklyPlanting(e) {
   e.preventDefault();
-
-  console.log(data);
 
   weeklyTrees = parseInt(document.getElementById("trees-planted").value);
   for (let i = 0; i < data.length; i++) {
@@ -128,20 +122,10 @@ function submitWeeklyPlanting(e) {
   localStorage.setItem("weeks", JSON.stringify(weeks));
 
   if (week > parseInt(weeks)) {
-    showCompletedSection();
+    goToResults();
   }
 }
 
-function showCompletedSection() {
-  let totalTrees = 0;
-  for (let i = 0; i < data.length; i++) {
-    if (data[i].name === group) {
-      totalTrees = data[i].treesPerWeek.reduce((a, b) => a + b, 0);
-    }
-  }
-  plantingSection.classList.add("hidden");
-  document.getElementById(
-    "completed-message"
-  ).textContent = `Thank you for joining the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
-  completedSection.classList.remove("hidden");
+function goToResults() {
+  console.log("results");
 }

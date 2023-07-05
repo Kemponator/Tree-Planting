@@ -31,35 +31,42 @@
 }
 
 .background-video {
-  position: absolute;
+  /* position: absolute;
   right: 0;
-  bottom: 0;
+  bottom: 0; */
+  width: 100%;
+  height: 100%;
   z-index: -1;
+  /* object-fit: cover; */
+  /* margin: 0; */
+  display: block;
 }
 
-@media (min-aspect-ratio: 16/9) {
+/* @media (min-aspect-ratio: 16/9) {
   .back-video {
     width: 100%;
-    height: auto;
-  }
-}
-
-@media (max-aspect-ratio: 16/9) {
-  .back-video {
-    width: auto;
     height: 100%;
   }
-}
+} */
+
+/* @media (max-aspect-ratio: 16/9) {
+  .back-video {
+    width: 100%;
+    height: 100%;
+  }
+} */
 
 .hero {
-  /* position: ; */
-  max-width: 80%;
+  position: relative;
+  max-width: 100%;
   /* border: 1920px 1080px; */
   margin: 0 auto;
   /* border: 1px solid red; */
 }
 
 .p1 {
+  position: absolute;
+  top: 0;
   width: 80%;
   max-width: 600px;
   text-align: center;

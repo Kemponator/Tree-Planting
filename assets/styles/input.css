@@ -41,6 +41,11 @@ legend {
   font-weight: bold;
 }
 
+button a {
+  text-decoration: none;
+  color: inherit;
+}
+
 /* button {
   background-color: var(--clr-accent);
   width: 100%;

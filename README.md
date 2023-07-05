@@ -49,3 +49,16 @@ By the end of the day the MVP will be:
 - Landing page styling complete
 - About page skeleton and basic styling completed
 - Fetch data from local storage and make basic chart to display results. (Stretch goal - calculate CO2 data and display)
+
+### Reflections on Tuesday 4th June
+
+- About page skeleton and main functionality completed
+- Data fetched from LS and basic chart displays.
+
+## Wednesday 5th June - Session 3
+
+By the end of the day the MVP will be:
+
+- Finish JS functionality for input page including LS saving and retrieval
+- Create leaf animation.
+- Stretch goal - add it CO2 calculation

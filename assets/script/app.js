@@ -2,7 +2,7 @@
 
 const data = [];
 
-let week = 1;
+// let week = 1;
 
 function getRandomNumber() {
   return (Math.floor(Math.random() * 10) + 1) * 10;

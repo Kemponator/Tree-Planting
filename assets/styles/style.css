@@ -11,6 +11,7 @@
 body {
   margin: 0;
   background-color: var(--clr-light);
+  font-family: "Montserrat", sans-serif;
 }
 
 /* .logo {
@@ -71,6 +72,13 @@ main {
 
 footer {
   background-color: var(--clr-accent);
+  text-align: center;
+  padding: 1em;
+}
+
+footer h3 {
+  font-family: "Montserrat", sans-serif;
+  font-weight: bold;
 }
 
 h1 {

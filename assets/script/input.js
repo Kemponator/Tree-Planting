@@ -63,7 +63,7 @@ function handleRegistrationFormSubmit(e) {
   const groupName = document.getElementById("group-name");
   const numberOfWeeks = document.getElementById("number-of-weeks");
 
-  group = groupName.value;
+  group = groupName.value[0].toUpperCase() + groupName.value.slice(1);
   weeks = numberOfWeeks.value;
 
   new Group(group);

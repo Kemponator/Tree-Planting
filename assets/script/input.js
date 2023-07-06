@@ -51,9 +51,9 @@ if (dataFromLS) {
   registrationSection.classList.remove("hidden");
 }
 
-console.log(data);
-console.log(weeks);
-console.log(week);
+// console.log(data);
+// console.log(weeks);
+// console.log(week);
 
 registrationForm.addEventListener("submit", handleRegistrationFormSubmit);
 
@@ -78,10 +78,7 @@ function handleRegistrationFormSubmit(e) {
 
   startPlantingButton.addEventListener("click", showPlantingSection);
 
-  localStorage.setItem("weekly-data", JSON.stringify(data));
-  localStorage.setItem("week", JSON.stringify(week));
-  localStorage.setItem("weeks", JSON.stringify(weeks));
-  localStorage.setItem("group", JSON.stringify(group));
+  saveToLocalStorage();
 }
 
 function welcomeUser(user, weeks) {
@@ -139,10 +136,7 @@ function submitWeeklyPlanting(e) {
     "planting-form-legend"
   ).textContent = `Tree Planting: Week ${week}`;
 
-  localStorage.setItem("weekly-data", JSON.stringify(data));
-  localStorage.setItem("week", JSON.stringify(week));
-  localStorage.setItem("weeks", JSON.stringify(weeks));
-  localStorage.setItem("group", JSON.stringify(group));
+  saveToLocalStorage();
 
   if (week > parseInt(weeks)) {
     showCompletedSection();
@@ -162,4 +156,11 @@ function showCompletedSection() {
   completedH3.textContent = `Thank you for taking part in the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
   completedMessage.appendChild(completedH3);
   completedSection.classList.remove("hidden");
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("weekly-data", JSON.stringify(data));
+  localStorage.setItem("week", JSON.stringify(week));
+  localStorage.setItem("weeks", JSON.stringify(weeks));
+  localStorage.setItem("group", JSON.stringify(group));
 }

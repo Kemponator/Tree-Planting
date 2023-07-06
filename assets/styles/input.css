@@ -1,7 +1,3 @@
-.disabled {
-  cursor: not-allowed;
-}
-
 .hidden {
   display: none !important;
 }
@@ -16,7 +12,10 @@ label {
 
 .input-main {
   height: 100%;
-  border: 1px solid red;
+  background-image: url("/assets/images/pngwing.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
 }
 
 .input-main .container {
@@ -26,7 +25,6 @@ label {
   justify-content: center;
   align-items: center;
   flex-grow: 1;
-  border: 1px solid red;
 }
 
 section {
@@ -40,7 +38,6 @@ form,
   display: flex;
   flex-direction: column;
   align-items: center;
-  border: 1px solid red;
 }
 
 h3,

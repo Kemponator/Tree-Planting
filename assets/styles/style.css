@@ -4,9 +4,10 @@
 
 :root {
   --clr-light: rgb(243, 243, 243);
-  --clr-dark: #4f1413;
+  --clr-dark: #023020;
+  --clr-mid: #035035;
   --clr-accent: #38b000;
-  --ff-fancy: "Sofadi One", cursive;
+  --ff-fancy: "Alex Brush", cursive;
 }
 body {
   margin: 0;
@@ -32,7 +33,7 @@ img {
 }
 
 header {
-  background-color: var(--clr-accent);
+  background-image: linear-gradient(var(--clr-mid), var(--clr-accent));
   padding: 1em 0;
 }
 
@@ -78,14 +79,10 @@ main {
 }
 
 footer {
-  background-color: var(--clr-accent);
+  /* background-color: var(--clr-accent); */
+  background-image: linear-gradient(var(--clr-accent), var(--clr-mid));
   text-align: center;
-  padding: 1em;
-}
-
-footer h3 {
-  font-family: "Montserrat", sans-serif;
-  font-weight: bold;
+  padding: 2em;
 }
 
 h1 {
@@ -93,6 +90,8 @@ h1 {
   font-family: var(--ff-fancy);
   font-weight: bold;
   font-size: 3rem;
+  text-shadow: 1px 1px 4px #eaeaea;
+  margin: 0.5em 0 0.3em 0;
 }
 
 @media (min-width: 600px) {
@@ -130,4 +129,10 @@ button:hover {
   button {
     width: 200px;
   }
+}
+
+footer h3 {
+  color: var(--clr-dark);
+  font-weight: bold;
+  text-shadow: 1px 1px 3px #eaeaea;
 }

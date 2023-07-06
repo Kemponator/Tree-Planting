@@ -20,12 +20,14 @@ img {
 }
 #img2 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  filter: blur(0.5px);
 }
 #img3 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
 }
 #img4 {
   box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  filter: blur(0.5px);
 }
 
 .about-main {
@@ -63,7 +65,8 @@ p.p2 {
   font-family: "Montserrat", sans-serif;
   color: #fff;
   text-align: center;
-  margin: 2px;
+  line-height: 1.6;
+  margin: 1rem;
   text-shadow: 1px 1px #000000;
 }
 

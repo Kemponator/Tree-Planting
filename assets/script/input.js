@@ -51,10 +51,6 @@ if (dataFromLS) {
   registrationSection.classList.remove("hidden");
 }
 
-// console.log(data);
-// console.log(weeks);
-// console.log(week);
-
 registrationForm.addEventListener("submit", handleRegistrationFormSubmit);
 
 function handleRegistrationFormSubmit(e) {
@@ -153,7 +149,10 @@ function showCompletedSection() {
   plantingSection.classList.add("hidden");
   const completedMessage = document.getElementById("completed-message");
   const completedH3 = document.createElement("h3");
-  completedH3.textContent = `Thank you for taking part in the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
+  completedH3.textContent = `Thank you for taking part in the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees! This could offset ${totalTrees} tonnes of CO2 over the next 100 years, which is equivalent to driving ${(
+    (totalTrees * 6000) /
+    40000
+  ).toFixed(1)} times round the world in a diesel car.`;
   completedMessage.appendChild(completedH3);
   completedSection.classList.remove("hidden");
 }

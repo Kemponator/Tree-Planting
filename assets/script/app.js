@@ -14,7 +14,7 @@ let group = "";
 let weeklyTrees;
 
 function Group(name) {
-  this.name = name;
+  this.name = name[0].toUpperCase() + name.slice(1);
   this.treesPerWeek = [];
   data.push(this);
 }

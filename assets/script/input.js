@@ -51,9 +51,9 @@ if (dataFromLS) {
   registrationSection.classList.remove("hidden");
 }
 
-console.log(data);
-console.log(weeks);
-console.log(week);
+// console.log(data);
+// console.log(weeks);
+// console.log(week);
 
 registrationForm.addEventListener("submit", handleRegistrationFormSubmit);
 
@@ -78,10 +78,7 @@ function handleRegistrationFormSubmit(e) {
 
   startPlantingButton.addEventListener("click", showPlantingSection);
 
-  localStorage.setItem("weekly-data", JSON.stringify(data));
-  localStorage.setItem("week", JSON.stringify(week));
-  localStorage.setItem("weeks", JSON.stringify(weeks));
-  localStorage.setItem("group", JSON.stringify(group));
+  saveToLocalStorage();
 }
 
 function welcomeUser(user, weeks) {
@@ -107,9 +104,9 @@ function welcomeUser(user, weeks) {
   }
 
   const welcomeMessage = document.getElementById("welcome-message");
-  const welcomeP = document.createElement("p");
-  welcomeP.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks. The other groups in the scheme are ${originalGroups}`;
-  welcomeMessage.appendChild(welcomeP);
+  const welcomeH3 = document.createElement("h3");
+  welcomeH3.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks. The other groups in the scheme are ${originalGroups}`;
+  welcomeMessage.appendChild(welcomeH3);
 }
 
 function showPlantingSection() {
@@ -139,10 +136,7 @@ function submitWeeklyPlanting(e) {
     "planting-form-legend"
   ).textContent = `Tree Planting: Week ${week}`;
 
-  localStorage.setItem("weekly-data", JSON.stringify(data));
-  localStorage.setItem("week", JSON.stringify(week));
-  localStorage.setItem("weeks", JSON.stringify(weeks));
-  localStorage.setItem("group", JSON.stringify(group));
+  saveToLocalStorage();
 
   if (week > parseInt(weeks)) {
     showCompletedSection();
@@ -157,8 +151,16 @@ function showCompletedSection() {
     }
   }
   plantingSection.classList.add("hidden");
-  document.getElementById(
-    "completed-message"
-  ).textContent = `Thank you for joining the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
+  const completedMessage = document.getElementById("completed-message");
+  const completedH3 = document.createElement("h3");
+  completedH3.textContent = `Thank you for taking part in the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
+  completedMessage.appendChild(completedH3);
   completedSection.classList.remove("hidden");
+}
+
+function saveToLocalStorage() {
+  localStorage.setItem("weekly-data", JSON.stringify(data));
+  localStorage.setItem("week", JSON.stringify(week));
+  localStorage.setItem("weeks", JSON.stringify(weeks));
+  localStorage.setItem("group", JSON.stringify(group));
 }

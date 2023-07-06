@@ -2,6 +2,10 @@
   box-sizing: border-box;
 }
 
+body {
+  min-height: 100vh;
+}
+
 .h2-1 {
   font-family: "Montserrat", sans-serif;
   font-size: 3rem;
@@ -29,23 +33,31 @@
   }
 }
 
-.background-video {
-  position: relative;
-  z-index: -1;
-  object-fit: cover;
-  width: 100%;
-  display: block;
-}
-
 .main {
   position: relative;
   width: 100%;
 }
 
 .hero {
-  position: relative;
-  max-width: 100%;
+  /* position: relative; */
+  width: 100%;
   margin: 0 auto;
+  overflow: hidden;
+  /* min-width: 1036px; */
+}
+
+.background-video {
+  z-index: -1;
+  object-fit: cover;
+  min-height: 90vh;
+  min-width: 1036px;
+  display: block;
+}
+
+@media (min-width: 1036px) {
+  .background-video {
+    width: 100%;
+  }
 }
 
 .p1-container {

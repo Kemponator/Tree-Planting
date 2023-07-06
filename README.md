@@ -77,3 +77,11 @@ By the end of the day the MVP will be:
 - Refactor code
 - When refreshing chart - back to home page (JS)
 - Stretch goal - Add Co2 calculation
+
+### Reflections on Thursday 6th July
+
+- Video formatting completed.
+- Form styling completed, including background image
+- Code refactored
+- User returns to home page when local storage is cleared and results page refreshed
+- CO2 calculations added

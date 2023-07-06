@@ -11,7 +11,6 @@ img {
 }
 
 div#leaves-animation {
-  /* border: 1px solid red; */
   position: static;
   width: 100%;
   height: 0;

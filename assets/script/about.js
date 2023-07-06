@@ -19,7 +19,6 @@ function handleBioClick(e) {
       bioButtonSam.textContent = "hide bio";
       samBioVisible = true;
     }
-
     samTopImage.classList.toggle("visible");
     samTopImage.classList.toggle("hidden");
   } else if (e.target.id === "bio-button-frances") {
@@ -30,7 +29,6 @@ function handleBioClick(e) {
       bioButtonFrances.textContent = "hide bio";
       francesBioVisible = true;
     }
-
     francesTopImage.classList.toggle("visible");
     francesTopImage.classList.toggle("hidden");
   }

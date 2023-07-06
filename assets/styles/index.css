@@ -40,11 +40,9 @@ body {
 }
 
 .hero {
-  /* position: relative; */
   width: 100%;
   margin: 0 auto;
   overflow: hidden;
-  /* min-width: 1036px; */
 }
 
 .background-video {

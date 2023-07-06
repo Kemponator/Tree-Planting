@@ -79,7 +79,6 @@ main {
 }
 
 footer {
-  /* background-color: var(--clr-accent); */
   background-image: linear-gradient(var(--clr-accent), var(--clr-mid));
   text-align: center;
   padding: 2em;
@@ -105,8 +104,6 @@ h2 {
   font-weight: bold;
   margin: 1em 0;
 }
-
-/* Links and buttons */
 
 button {
   background-color: var(--clr-accent);

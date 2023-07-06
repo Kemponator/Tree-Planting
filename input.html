@@ -44,19 +44,34 @@
             id="registration-section"
           >
             <form id="registration-form">
+              <h3>
+                Thank you for your interest in the Green Leaves Scheme. We would
+                love to have you on board. To register for the scheme please
+                tell us the name of your group and for how many weeks you would
+                like to take part.
+              </h3>
               <fieldset>
                 <legend>Registration Form</legend>
-                <label for="group-name">Group Name</label>
-                <input type="text" id="group-name" name="group-name" required />
-                <label for="number-of-weeks">Number of Weeks</label>
-                <input
-                  type="number"
-                  id="number-of-weeks"
-                  name="number-of-weeks"
-                  min="4"
-                  max="10"
-                  required
-                />
+                <div>
+                  <label for="group-name">Group Name:</label>
+                  <input
+                    type="text"
+                    id="group-name"
+                    name="group-name"
+                    required
+                  />
+                </div>
+                <div>
+                  <label for="number-of-weeks">Number of Weeks:</label>
+                  <input
+                    type="number"
+                    id="number-of-weeks"
+                    name="number-of-weeks"
+                    min="4"
+                    max="10"
+                    required
+                  />
+                </div>
               </fieldset>
               <button type="submit" id="registration-form-button">
                 Submit
@@ -73,16 +88,19 @@
             <form id="planting-form">
               <fieldset>
                 <legend id="planting-form-legend"></legend>
-                <label for="trees-planted" id="trees-planted-label"> </label>
-                <input
-                  type="number"
-                  id="trees-planted"
-                  min="10"
-                  max="100"
-                  step="10"
-                  required
-                />
-                trees!
+                <div>
+                  <label for="trees-planted" id="trees-planted-label"> </label>
+                  <input
+                    class="right-margin"
+                    type="number"
+                    id="trees-planted"
+                    min="10"
+                    max="100"
+                    step="10"
+                    required
+                  />
+                  <span class="bold">trees!</span>
+                </div>
               </fieldset>
               <button type="submit">submit</button>
             </form>

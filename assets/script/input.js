@@ -107,9 +107,9 @@ function welcomeUser(user, weeks) {
   }
 
   const welcomeMessage = document.getElementById("welcome-message");
-  const welcomeP = document.createElement("p");
-  welcomeP.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks. The other groups in the scheme are ${originalGroups}`;
-  welcomeMessage.appendChild(welcomeP);
+  const welcomeH3 = document.createElement("h3");
+  welcomeH3.textContent = `Welcome, ${user}! Thank you for signing up to the Green Leaves Scheme for ${weeks} weeks. The other groups in the scheme are ${originalGroups}`;
+  welcomeMessage.appendChild(welcomeH3);
 }
 
 function showPlantingSection() {
@@ -157,8 +157,9 @@ function showCompletedSection() {
     }
   }
   plantingSection.classList.add("hidden");
-  document.getElementById(
-    "completed-message"
-  ).textContent = `Thank you for joining the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
+  const completedMessage = document.getElementById("completed-message");
+  const completedH3 = document.createElement("h3");
+  completedH3.textContent = `Thank you for taking part in the Green Leaves scheme. ${group} have planted a total of ${totalTrees} trees!`;
+  completedMessage.appendChild(completedH3);
   completedSection.classList.remove("hidden");
 }

@@ -3,7 +3,15 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
+}
+
+label {
+  display: inline-block;
+  margin-right: 1em;
+  margin-bottom: 0.5em;
+  font-size: 1rem;
+  font-weight: bold;
 }
 
 .input-main {
@@ -25,15 +33,36 @@ section {
   width: 100%;
 }
 
-form {
+form,
+.welcome-section,
+.completed-section {
   width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   border: 1px solid red;
+}
+
+h3,
+.bold {
+  font-size: 1.125rem;
+  font-weight: bold;
+  line-height: 1.4;
+}
+
+.right-margin {
+  margin-right: 1em;
 }
 
 fieldset {
   border: 2px solid var(--clr-dark);
   padding: 2em;
   border-radius: 10px;
+  margin-top: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  gap: 2em;
 }
 
 legend {

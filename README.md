@@ -2,7 +2,7 @@
 
 ## Authors
 
-Sam Kemp
+Sam Kemp,
 Frances Hitchcock
 
 ## Project Description
@@ -28,7 +28,7 @@ The minimum viable product (MVP) is for the number of trees planted to be collec
 
 Chart.js
 
-## Monday 3rd June - Session 1
+## Monday 3rd July - Session 1
 
 By the end of the day the MVP will be:
 
@@ -36,12 +36,12 @@ By the end of the day the MVP will be:
 - to have the form HTML completed on user input page
 - to have constructor function set up and operating for basic information
 
-### Reflections on Monday 3rd June
+### Reflections on Monday 3rd July
 
 - Generic header and footer set up. Styling to be optimised.
 - Constructor function is set up and operating
 
-## Tuesday 4th June - Session 2
+## Tuesday 4th July - Session 2
 
 By the end of the day the MVP will be:
 
@@ -50,15 +50,30 @@ By the end of the day the MVP will be:
 - About page skeleton and basic styling completed
 - Fetch data from local storage and make basic chart to display results. (Stretch goal - calculate CO2 data and display)
 
-### Reflections on Tuesday 4th June
+### Reflections on Tuesday 4th July
 
 - About page skeleton and main functionality completed
 - Data fetched from LS and basic chart displays.
 
-## Wednesday 5th June - Session 3
+## Wednesday 5th July - Session 3
 
 By the end of the day the MVP will be:
 
 - Finish JS functionality for input page including LS saving and retrieval
 - Create leaf animation.
 - Stretch goal - add it CO2 calculation
+
+### Reflections on Wednesday 5th July
+
+- Finished JavaScript functionality
+- Created the leaf animation
+- Didn't add Co2 addition
+- Tidied up CSS throughout all pages
+
+## Thursday 6th July - Session 4
+
+- Complete video CSS formatting
+- Style the forms with CSS: Add PNG image of leaves (translucent) in background.
+- Refactor code
+- When refreshing chart - back to home page (JS)
+- Stretch goal - Add Co2 calculation
